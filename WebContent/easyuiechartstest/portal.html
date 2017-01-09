@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title></title>
+	<script type="text/javascript" src="../EasyUI/jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+			/* jQuery.ajax({
+				url:'http://172.16.21.73:8980/cdomain/cd',
+				type:"post",
+				dataType:"text",
+				data:{commonURL:"https://www.baidu.com"},
+				async:false,
+				success:function(serverinfo){
+					alert(serverinfo);
+				}
+			}); */
+			/* jQuery("#ckdiv").on("click",function(){
+				var ckx = jQuery(this).find("input");
+				if(ckx.prop("checked")){
+					ckx.removeProp("checked");
+				}else{
+					ckx.prop("checked",true);
+				}
+			}); */
+			var num=1.5685;
+			//alert(/^\d+\.\d{2}[0|2|4|6|8][5]$/.test(numStr.toString()));
+			//alert(numFormat(num,3));
+			//alert(isNaN("@"));
+			//alert(Number(323.000));
+			//alert(Math.round(1.13,1));
+			alert(num.toFixed(3)+"...");
+		});
+		function tmp(arg,count){
+			if(!isNaN(arg) && count > 0){
+				var r1,m,tmp; 
+				/^\d+\.\d+$/;
+				/^\d+\.\d{3}$/;
+				/^\d+\.\d{3}[0-4]\d*$/;
+				/^\d+\.\d{3}[6-9]\d*$/;
+				/^\d+\.\d{3}[5]\d+$/;
+				/^\d+\.\d{2}[0|2|4|6|8][5]$/;
+				/^\d+\.\d{2}[1|3|5|7|9][5]$/;//
+				var argStr = arg.toString();
+				//alert("^\\d+\\.\\d{"+(count+1)+",}$");
+				var reg1=new RegExp("^\\d+\\.\\d{"+(count+1)+",}$");//需要修约正则
+				if(reg1.test(argStr)){
+					r1=argStr.split(".")[1].length;
+					var flag = 0;
+					var reg2=new RegExp("^\\d+\\.\\d{"+(count-1)+"}[1|3|5|7|9][5]$");//5奇数
+					var reg3=new RegExp("^\\d+\\.\\d{"+(count-1)+"}[0|2|4|6|8][5]$");//5偶数
+					var reg4=new RegExp("^\\d+\\.\\d{"+count+"}[5]\\d+$");//5后有大于0的值
+					var reg5=new RegExp("^\\d+\\.\\d{"+count+"}[6-9]\\d*$");//6入
+					var reg6=new RegExp("^\\d+\\.\\d{"+count+"}[0-4]\\d*$");//4舍
+					if(reg4.test(argStr)){
+						flag = 1;
+					}else if(reg2.test(argStr)){
+						flag = 1;
+					}else if(reg3.test(argStr)){
+						flag = 0;
+					}else if(reg5.test(argStr)){
+						flag = 1;
+					}else if(reg6.test(argStr)){
+						flag = 0;
+					}
+					var tarArg = Number(argStr.substr(0,argStr.length-(r1-count)));
+					m = Math.pow(10,count);
+					alert((tarArg*m+flag)/m);
+				}
+			}
+			return arg;
+		}
+		/**
+		*	无需修约的将直接返回
+		*	arg 需要四舍六入五留双的数
+		*	count 需要保留的小数点位数
+		var reg1=new RegExp("^\\d+\\.\\d{"+(count+1)+",}$");//需要修约正则
+		var reg2=new RegExp("^\\d+\\.\\d{"+(count-1)+"}[1|3|5|7|9][5]$");//5前为奇数 
+		var reg3=new RegExp("^\\d+\\.\\d{"+(count-1)+"}[0|2|4|6|8][5]$");//5前为偶数
+		var reg4=new RegExp("^\\d+\\.\\d{"+count+"}[5]\\d+$");//5后有大于0的值
+		var reg5=new RegExp("^\\d+\\.\\d{"+count+"}[6-9]\\d*$");//6入
+		var reg6=new RegExp("^\\d+\\.\\d{"+count+"}[0-4]\\d*$");//4舍
+		*/
+		function numFormat(arg,count){
+			if(!isNaN(arg) && count > 0){
+				var argStr = Number(arg).toString();
+				if(new RegExp("^\\d+\\.\\d{"+(count+1)+",}$").test(argStr)){//需要修约正则
+					var tarArg = Number(argStr.substr(0,argStr.length-(argStr.split(".")[1].length-count)));
+					var m = Math.pow(10,count);
+					if (new RegExp("^\\d+\\.\\d{"+count+"}[6-9]\\d*$").test(argStr) || //6入
+						new RegExp("^\\d+\\.\\d{"+(count-1)+"}[1|3|5|7|9][5]$").test(argStr) ||//5前为奇数 
+						new RegExp("^\\d+\\.\\d{"+count+"}[5]\\d+$").test(argStr)){//5后有大于0的数
+						return (tarArg*m+1)/m;
+					}
+					return (tarArg*m)/m;
+				}
+			}
+			return arg;
+		}
+	</script>
+</head>
+<body>
+	<div id="ckdiv" style="width:500px;height:300px;background-color:gray;margin:0 auto;border-radius: 20px;margin-top:200px;">
+		<!-- <input type="checkbox">测试</input> -->
+		<form action="../FileUploadSwitch" method="post" enctype="multipart/form-data" style="text-align:left;padding-left:100px;"><br/>
+			文件：<input type="file" name="imgx"></input><br/><br/>
+			名称：<input type="text" name="namex"></input><br/><br/>
+			<input type="submit" value="提交"/>
+		</form>
+	</div>
+</body>
+</html>
