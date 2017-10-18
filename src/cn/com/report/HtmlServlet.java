@@ -93,7 +93,7 @@ public class HtmlServlet extends HttpServlet {
 	
 	//                                                           title,     field name     data type
 	TextColumnBuilder<String>     itemColumn      = col.column("Item",       "item",      type.stringType()).setStyle(boldStyle);
-	TextColumnBuilder<Integer>    quantityColumn  = col.column("Quantity",   "quantity",  type.integerType());
+	TextColumnBuilder<Integer>    quantityColumn  = col.column("数量",   "quantity",  type.integerType());
 	TextColumnBuilder<BigDecimal> unitPriceColumn = col.column("Unit price", "unitprice", currencyType);
 	//price = unitPrice * quantity
 	TextColumnBuilder<BigDecimal> priceColumn     = unitPriceColumn.multiply(quantityColumn).setTitle("Price")

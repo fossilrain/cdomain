@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="38d7bd79-4f83-463e-a2ca-15a7c27500cf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="rank" class="java.lang.String"/>
+	<parameter name="yuwen" class="java.lang.String"/>
+	<parameter name="shuxue" class="java.lang.String"/>
+	<parameter name="yingyu" class="java.lang.String"/>
+	<parameter name="shengwu" class="java.lang.String"/>
+	<parameter name="wuli" class="java.lang.String"/>
+	<parameter name="huaxue" class="java.lang.String"/>
+	<parameter name="maxsubject" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<variable name="total" class="java.lang.String">
+		<variableExpression><![CDATA[String.valueOf(Float.valueOf($P{yuwen}) + Float.valueOf($P{shuxue})+ Float.valueOf($P{yingyu})+ Float.valueOf($P{shengwu})+ Float.valueOf($P{wuli})+ Float.valueOf($P{huaxue}))]]></variableExpression>
+	</variable>
+	<variable name="avg" class="java.lang.String">
+		<variableExpression><![CDATA[String.valueOf((Float.valueOf($P{yuwen}) + Float.valueOf($P{shuxue})+ Float.valueOf($P{yingyu})+ Float.valueOf($P{shengwu})+ Float.valueOf($P{wuli})+ Float.valueOf($P{huaxue}))/6f)]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="187" y="26" width="173" height="28" uuid="3a67ac43-9e27-417f-8884-8d0b4ee3da5b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+					<paragraph lineSpacing="AtLeast"/>
+				</textElement>
+				<text><![CDATA[广州中学成绩单]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="51" width="171" height="30" uuid="5b78e45b-2422-492c-bbc8-9faad7c9449a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[2017年春季五校联考]]></text>
+			</staticText>
+			<image>
+				<reportElement x="8" y="22" width="155" height="60" uuid="61497e14-8a4d-40d5-894f-3dfd532b3fa8">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["http://127.0.0.1:8280/cdomain/barcode?id="+$P{id}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="339" splitType="Stretch">
+			<rectangle>
+				<reportElement x="18" y="6" width="531" height="289" uuid="155fca66-e702-462c-8fa4-0594b58116b7"/>
+			</rectangle>
+			<line>
+				<reportElement x="128" y="6" width="1" height="289" uuid="6d45b7b8-314f-4432-a5cf-1bd2099b3fc0"/>
+			</line>
+			<line>
+				<reportElement x="388" y="6" width="1" height="289" uuid="59c19d57-5fed-4c8d-91c6-a025c2fb3bd5"/>
+			</line>
+			<line>
+				<reportElement x="128" y="55" width="261" height="1" uuid="2ab1b957-7cba-47d6-b5a2-99789b85dd57"/>
+			</line>
+			<line>
+				<reportElement x="18" y="93" width="531" height="1" uuid="0b7bf0a3-3b43-4d62-9900-fc3f6101ef57"/>
+			</line>
+			<line>
+				<reportElement x="128" y="147" width="261" height="1" uuid="61fe7d01-53b7-4484-abaa-fbffc70dd9b4">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="18" y="191" width="529" height="1" uuid="577984a6-8980-44b0-9201-ddc24a674d98">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="128" y="236" width="261" height="1" uuid="17b0973a-0773-4275-baab-252c4665031d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="260" y="6" width="1" height="289" uuid="6ba1eac4-ff0c-456a-bae4-2e9f3b1da1f6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="18" y="11" width="100" height="30" uuid="081c9866-9a00-4c0d-8ce6-c711beb66470"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="101" width="100" height="30" uuid="7a1631e9-33ab-4bb7-80a7-0ffdd94baa9f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[学号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="200" width="100" height="30" uuid="8b4b7095-e45b-4f7c-bc16-57b7c812ea50"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[排名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="15" width="100" height="30" uuid="5924641c-4383-414b-a79a-98746aff3ee4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[语文]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="60" width="100" height="30" uuid="54a46864-21a3-4dad-b5c2-32e172634a21"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[数学]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="107" width="100" height="30" uuid="745cb1d0-54bd-44cc-a821-8de2702a2d6b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[英语]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="155" width="100" height="30" uuid="7e186aec-60ac-410a-a725-940da704156c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[生物]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="197" width="100" height="30" uuid="1da39afb-1880-427c-a1f2-5a6e550532a6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[物理]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="248" width="100" height="30" uuid="31f118bb-4181-4503-a2cb-3c546ddb433f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[化学]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="14" width="100" height="30" uuid="c64ff38b-1304-4067-aa52-5be7db50c780"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[总分]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="107" width="100" height="30" uuid="43678558-1929-42a6-a946-40a4f314a903"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[平均分]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="204" width="100" height="30" uuid="a753b3e8-4583-4f56-b600-164d790e3322"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[排名最高科目]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="53" width="100" height="30" uuid="0c525ccb-ad98-47bd-9067-ae7f7555aabc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="150" width="100" height="30" uuid="d3ec33a3-7758-49dc-b901-d309002c08d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="250" width="100" height="30" uuid="d7885eaf-806d-47ec-8515-d9fa34b1a987"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{rank}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="19" width="100" height="30" uuid="33be119f-4d78-4ac7-bce5-5d450ea847af"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{yuwen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="69" width="100" height="30" uuid="c579c259-28f3-4ba5-b0d1-a92befbcbd6e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{shuxue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="115" width="100" height="30" uuid="15dc588a-0229-4c54-9045-cca0dbc4480f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{yingyu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="164" width="100" height="30" uuid="fbabf19d-89e6-4092-bda7-db976bd9cdb7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{shengwu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="207" width="100" height="30" uuid="42b0fb61-f837-445b-b1b3-2eb32a5e331f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{wuli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="252" width="100" height="30" uuid="eb61b82a-2959-488d-aea4-c019d6fa92b5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{huaxue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="248" width="100" height="30" uuid="0bd4479e-6f4e-46ec-8d4a-3727d5f346fe"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{maxsubject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="59" width="100" height="30" uuid="ff8b4b91-3f4f-4cee-bdcc-63a50faf4092"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="150" width="100" height="30" uuid="b14ab45f-0f63-4d02-944c-ba224d212d67"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{avg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

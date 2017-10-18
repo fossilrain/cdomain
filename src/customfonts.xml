@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fontFamilies>
+
+	<fontFamily name="FreeUniversal">
+		<normal>net/sf/dynamicreports/examples/fonts/FreeUniversal-Regular.ttf</normal>
+		<bold>net/sf/dynamicreports/examples/fonts/FreeUniversal-Bold.ttf</bold>
+		<italic>net/sf/dynamicreports/examples/fonts/FreeUniversal-Italic.ttf</italic>
+		<boldItalic>net/sf/dynamicreports/examples/fonts/FreeUniversal-BoldItalic.ttf</boldItalic>
+		<pdfEncoding>Cp1252</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="ZWJT_FSZWJT_FS">
+		<normal>fonts/ZWJT_FS/simfang.ttf</normal>
+		<bold>fonts/ZWJT_FS/simfang.ttf</bold>
+		<italic>fonts/ZWJT_FS/simfang.ttf</italic>
+		<boldItalic>fonts/ZWJT_FS/simfang.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="AMHL">
+		<normal>fonts/AMHL/nyala.ttf</normal>
+		<bold>fonts/AMHL/nyala.ttf</bold>
+		<italic>fonts/AMHL/nyala.ttf</italic>
+		<boldItalic>fonts/AMHL/nyala.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="ZWFT">
+		<normal>fonts/ZWFT/msjh.ttf</normal>
+		<bold>fonts/ZWFT/msjhbd.ttf</bold>
+		<italic>fonts/ZWFT/msjh.ttf</italic>
+		<boldItalic>fonts/ZWFT/msjhbd.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="ZWJT_HT">
+		<normal>fonts/ZWJT_HT/simhei.ttf</normal>
+		<bold>fonts/ZWJT_HT/simhei.ttf</bold>
+		<italic>fonts/ZWJT_HT/simhei.ttf</italic>
+		<boldItalic>fonts/ZWJT_HT/simhei.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="ZWJT_ST">
+		<normal>fonts/ZWJT_ST/simsun.ttf</normal>
+		<bold>fonts/ZWJT_ST/simsun.ttf</bold>
+		<italic>fonts/ZWJT_ST/simsun.ttf</italic>
+		<boldItalic>fonts/ZWJT_ST/simsun.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+	<fontFamily name="ZWJT_WRYH">
+		<normal>fonts/ZWJT_WRYH/msyh.ttf</normal>
+		<bold>fonts/ZWJT_WRYH/msyhbd.ttf</bold>
+		<italic>fonts/ZWJT_WRYH/msyh.ttf</italic>
+		<boldItalic>fonts/ZWJT_WRYH/msyhbd.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+</fontFamilies>
